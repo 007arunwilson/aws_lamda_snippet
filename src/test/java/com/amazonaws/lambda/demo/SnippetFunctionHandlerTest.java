@@ -7,6 +7,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import com.amazonaws.services.lambda.runtime.Context;
+import javax.json.*;
 
 /**
  * A simple test harness for locally invoking your Lambda function handler.
@@ -18,6 +19,7 @@ public class SnippetFunctionHandlerTest {
     @BeforeClass
     public static void createInput() throws IOException {
         // TODO: set up your sample input object here.
+    	
         input = null;
     }
 
