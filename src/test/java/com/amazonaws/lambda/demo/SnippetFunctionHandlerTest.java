@@ -8,6 +8,8 @@ import org.junit.Test;
 
 import com.amazonaws.services.lambda.runtime.Context;
 
+import org.json.*;
+
 
 /**
  * A simple test harness for locally invoking your Lambda function handler.
@@ -20,8 +22,8 @@ public class SnippetFunctionHandlerTest {
     public static void createInput() throws IOException {
         // TODO: set up your sample input object here.
     	
-
-    	input = null;
+    	String input_string = "{\"key_1\":\"value_1\"}";
+    	input = input_string;
     }
 
     private Context createContext() {
