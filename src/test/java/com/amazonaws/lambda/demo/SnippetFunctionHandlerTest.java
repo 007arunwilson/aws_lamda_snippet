@@ -9,6 +9,7 @@ import org.junit.Test;
 import com.amazonaws.services.lambda.runtime.Context;
 import javax.json.*;
 
+
 /**
  * A simple test harness for locally invoking your Lambda function handler.
  */
@@ -20,7 +21,17 @@ public class SnippetFunctionHandlerTest {
     public static void createInput() throws IOException {
         // TODO: set up your sample input object here.
     	
-        input = null;
+    	JsonObject json_s = Json.createObjectBuilder()
+    		     .add("name", "Falco")
+    		     .add("age", "12")
+    		     .add("biteable", Boolean.FALSE).build();
+        
+    	String greeting = "Hello world!";
+    	//int int_1 = 2;
+    	
+    	//Json json_obj
+
+    	input = json_s;
     }
 
     private Context createContext() {
