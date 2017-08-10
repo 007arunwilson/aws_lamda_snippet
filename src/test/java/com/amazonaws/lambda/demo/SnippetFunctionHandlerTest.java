@@ -7,7 +7,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import com.amazonaws.services.lambda.runtime.Context;
-import javax.json.*;
 
 
 /**
@@ -21,17 +20,8 @@ public class SnippetFunctionHandlerTest {
     public static void createInput() throws IOException {
         // TODO: set up your sample input object here.
     	
-    	JsonObject json_s = Json.createObjectBuilder()
-    		     .add("name", "Falco")
-    		     .add("age", "12")
-    		     .add("biteable", Boolean.FALSE).build();
-        
-    	String greeting = "Hello world!";
-    	//int int_1 = 2;
-    	
-    	//Json json_obj
 
-    	input = json_s;
+    	input = null;
     }
 
     private Context createContext() {
